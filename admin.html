@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tantura Dungeons - Admin</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>Tantura Dungeons - Painel Admin</h1>
+            <button id="logout-button" style="display: none;">Sair</button>
+        </nav>
+    </header>
+
+    <main>
+        <section id="login-screen">
+            <h2>Login de Administrador</h2>
+            <form id="login-form">
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+                <label for="password">Senha:</label>
+                <input type="password" id="password" required>
+                <button type="submit">Entrar</button>
+                <p id="login-error" style="color: red; display: none;">Email ou senha incorretos.</p>
+            </form>
+        </section>
+
+        <section id="admin-panel" style="display: none;">
+            <h2>Bem-vindo ao Painel de Admin!</h2>
+
+            <section id="post-news">
+                <h3>Postar Nova Notícia</h3>
+                <form id="news-form">
+                    <label for="news-title">Título:</label>
+                    <input type="text" id="news-title" required>
+                    <label for="news-content">Conteúdo:</label>
+                    <textarea id="news-content" rows="10" required></textarea>
+                    <label for="news-image-url">URL da Imagem (opcional):</label>
+                    <input type="url" id="news-image-url">
+                    <label for="news-video-url">URL do Vídeo do YouTube (opcional):</label>
+                    <input type="url" id="news-video-url" placeholder="Ex: https://www.youtube.com/watch?v=VIDEO_ID">
+                    <button type="submit">Postar Notícia</button>
+                    <p id="news-status"></p>
+                </form>
+            </section>
+
+            <section id="update-download">
+                <h3>Atualizar Informações de Download</h3>
+                <form id="download-form">
+                    <label for="game-image-url">URL da Imagem do Jogo:</label>
+                    <input type="url" id="game-image-url" required>
+                    <label for="game-version-text">Texto da Versão:</label>
+                    <input type="text" id="game-version-text" required>
+                    <label for="download-link-url">URL do Link de Download:</label>
+                    <input type="url" id="download-link-url" required>
+                    <button type="submit">Salvar Alterações</button>
+                    <p id="download-status"></p>
+                </form>
+            </section>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Tantura Dungeons. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- SDKs do Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+
+    <!-- Seus scripts -->
+    <script src="firebase-config.js"></script>
+    <script src="admin.js"></script>
+</body>
+</html>
