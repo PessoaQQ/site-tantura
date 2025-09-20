@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tantura Dungeons</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>Tantura Dungeons</h1>
+            <ul>
+                <li><a href="#noticias">Notícias</a></li>
+                <li><a href="#download">Download</a></li>
+                <li><a href="admin.html">Admin</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="noticias">
+            <h2>Últimas Notícias</h2>
+            <div id="news-container">
+                <!-- Notícias serão carregadas aqui pelo JavaScript -->
+                <p>Carregando notícias...</p>
+            </div>
+        </section>
+
+        <section id="download">
+            <h2>Baixe o Jogo</h2>
+            <div class="download-content">
+                <img id="game-image" src="" alt="Imagem do Jogo" style="max-width: 100%; height: auto; display: none;">
+                <p>Versão: <span id="game-version">Carregando...</span></p>
+                <a id="download-button" href="#" target="_blank" class="button" style="display: none;">BAIXAR AGORA</a>
+                <p id="download-loading">Carregando informações de download...</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Tantura Dungeons. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- SDKs do Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    
+    <!-- Seus scripts -->
+    <script src="firebase-config.js"></script>
+    <script src="app.js"></script>
+</body>
+      </html>
